@@ -119,4 +119,3 @@ ptr->valeur = 10;
 ```
 
 Ici, `ptr` est un pointeur vers une instance de `MaStructure`. Pour accéder au membre `valeur` de cette structure, nous utilisons `ptr->valeur`. En fait, `ptr->valeur` est un raccourci pour `(*ptr).valeur`. Les deux sont équivalents, mais `ptr->valeur` est plus couramment utilisé car il est plus facile à lire et à écrire.
-```
