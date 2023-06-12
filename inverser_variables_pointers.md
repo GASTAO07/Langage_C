@@ -31,7 +31,7 @@ int main(void) {
 Ce code utilise une variable temporaire `temp` pour stocker la valeur de `A` avant de l'écraser avec la valeur de `B`. Ensuite, la valeur temporaire est copiée dans `B`, ce qui permet d'inverser les valeurs des deux variables.
 ```
 
-**Conversation 2**
+** 2**
 
 ```md
 ## Explication sur les pointeurs avec des exemples de plats de nourriture
@@ -80,16 +80,12 @@ Dans ce code, `platA` et `platB` sont les variables qui représentent les quanti
 Lorsque nous utilisons `*p1` et `*p2`, nous accédons à la valeur à l'adresse pointée par le pointeur. Par exemple, `*p1` renvoie la valeur de `platA`, et `*p2` renvoie la valeur de `platB`.
 
 En échangeant les valeurs des pointeurs, nous modifions indirectement les variables `platA` et `platB`, ce qui entraîne l'échange des contenus des plats.
-
-J'espère que cela clarifie la notion de pointeur avec cet exemple des plats de nourriture. N'hésitez pas à poser d'autres questions si vous en avez !
 ```
 
-**Conversation 3**
+**3**
 
 ```md
 ## Explication de l'utilisation de `temp` dans l'échange de variables
-
-Je m'excuse si cela n'était pas clair dans ma réponse précédente. Permettez-moi de vous expliquer plus en détail.
 
 Dans l'exemple donné, `A` et `B` sont des variables entières (représentant les plats de nourriture), tandis que `p1` et `p2` sont des pointeurs vers des entiers. Un pointeur est une variable qui contient l'adresse d'une autre variable.
 
@@ -104,6 +100,4 @@ p1 = *p2;`, nous assignons la valeur de `B` à `A`.
 Enfin, nous copions la valeur temporaire (`A` avant l'échange) dans `B` en utilisant `*p2 = temp;`. Comme `p2` pointe vers `B`, `*p2` fait référence à la valeur de `B`, et nous assignons la valeur temporaire (`A` avant l'échange) à `B`.
 
 En résumé, nous utilisons des pointeurs pour accéder et modifier les valeurs des variables pointées. En stockant temporairement la valeur d'une variable avant de la modifier, nous pouvons effectuer l'échange correctement sans perdre les données originales.
-
-J'espère que cela clarifie pourquoi nous utilisons `temp = *p1;` pour stocker la valeur de `A` avant l'échange. N'hésitez pas à demander des éclaircissements supplémentaires si nécessaire !
 ```
