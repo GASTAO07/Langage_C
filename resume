@@ -36,8 +36,6 @@
 - Parcours en largeur :
   - Parcours de niveau (BFS) : Explore les nœuds par niveau, en commençant par la racine.
 
-Bien sûr ! Voici un tableau comparatif montrant la différence entre les temps requis pour chaque opération (insertion, suppression et accès) dans un tableau et une liste chaînée :
-
 | Opération    | Tableau                     | Liste chaînée                |
 |--------------|-----------------------------|------------------------------|
 | Insertion    | Proportionnel à la taille   | Constant (en tête de liste)  |
@@ -49,7 +47,3 @@ Ce tableau illustre les différences de performances entre les tableaux et les l
 Dans un tableau, l'insertion et la suppression nécessitent généralement un décalage des éléments suivants, ce qui prend un temps proportionnel à la taille du tableau. En revanche, dans une liste chaînée, l'insertion en tête de liste et la suppression d'un élément déjà connu peuvent être réalisées en temps constant, car elles n'impliquent que des mises à jour de liens.
 
 En ce qui concerne l'accès, les tableaux permettent un accès direct à un élément en utilisant son indice, ce qui prend un temps constant. Dans une liste chaînée, l'accès à un élément spécifique nécessite de parcourir la liste depuis le début, ce qui prend un temps proportionnel à la position de l'élément.
-
-Il est important de noter que ces caractéristiques peuvent varier en fonction des implémentations spécifiques et des optimisations utilisées. Cependant, cette comparaison générale met en évidence les différences fondamentales entre les tableaux et les listes chaînées en termes de performances.
-
-J'espère que cela clarifie les différences entre les tableaux et les listes chaînées en termes de temps requis pour chaque opération. Si vous avez d'autres questions, n'hésitez pas à les poser !
