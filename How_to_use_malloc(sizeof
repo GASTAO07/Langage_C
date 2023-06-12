@@ -1,0 +1,93 @@
+# Manipulation de structures et allocation dynamique de mémoire en C
+
+Ce README explique comment manipuler des structures et effectuer une allocation dynamique de mémoire en langage C. Il fournit des exemples de code et des explications pour une meilleure compréhension.
+
+## Structure `Element`
+
+Nous allons utiliser une structure appelée `Element` qui contient deux membres :
+- `nombre` : un entier pour stocker une valeur numérique.
+- `suivant` : un pointeur vers une autre structure `Element` pour créer des listes chaînées.
+
+Voici la définition de la structure `Element` :
+
+```c
+typedef struct Element {
+    int nombre;
+    struct Element* suivant;
+} Element;
+```
+
+## Allocation dynamique de mémoire avec `malloc`
+
+La fonction `malloc` est utilisée pour allouer dynamiquement de la mémoire pendant l'exécution d'un programme. Pour allouer de la mémoire pour un objet de type spécifié, nous utilisons `malloc(sizeof(type))`. Cela demande au système d'exploitation d'allouer la mémoire nécessaire et renvoie un pointeur vers le début de cette mémoire allouée.
+
+Voici un exemple d'utilisation de `malloc` pour allouer de la mémoire pour une structure `Element` :
+
+```c
+Element* nouveau = malloc(sizeof(Element));
+```
+
+Dans cet exemple, nous allouons de la mémoire pour un nouvel élément de type `Element` en utilisant `malloc(sizeof(Element))`. Le résultat est stocké dans le pointeur `nouveau`.
+
+## Manipulation des membres de la structure avec l'opérateur de flèche `->`
+
+Une fois que nous avons alloué de la mémoire pour une structure, nous pouvons accéder à ses membres à l'aide de l'opérateur de flèche (`->`). Cet opérateur simplifie l'accès aux membres d'une structure à travers un pointeur.
+
+Voici un exemple de manipulation des membres de la structure `Element` :
+
+```c
+nouveau->nombre = 42;
+nouveau->suivant = NULL;
+```
+
+Dans cet exemple, `nouveau->nombre = 42;` affecte la valeur 42 à la variable `nombre` de la structure pointée par `nouveau`. De même, `nouveau->suivant = NULL;` affecte la valeur `NULL` au pointeur `suivant`.
+
+## Libération de la mémoire avec `free`
+
+Lorsque vous avez terminé d'utiliser la mémoire allouée avec `malloc`, il est important de la libérer pour éviter les fuites de mémoire. Cela se fait en utilisant la fonction `free`.
+
+Voici un exemple de libération de la mémoire allouée pour la structure `Element` :
+
+```c
+free(nouveau);
+```
+
+Dans cet exemple, nous utilisons `free(nouveau);` pour libérer la mémoire allouée pour la structure pointée par `nouveau`.
+
+## Exemple complet
+
+Voici un exemple complet qui met en œuvre les concepts expliqués ci-dessus :
+
+```c
+#include <stdio.h>
+#include <stdlib.h>
+
+typedef struct Element {
+    int nombre;
+    struct Element* suivant;
+} Element;
+
+int main() {
+    Element* nouveau = malloc(sizeof(Element));
+    if (nouveau == NULL) {
+        printf("Erreur d'allocation de mémoire\n");
+        return
+
+ 1;
+    }
+
+    nouveau->nombre = 42;
+    nouveau->suivant = NULL;
+    
+    // Utilisez la structure nouveau ici...
+
+    free(nouveau);
+    return 0;
+}
+```
+
+Dans cet exemple, nous allouons de la mémoire pour un nouvel élément de la structure `Element` avec `malloc(sizeof(Element))`. Ensuite, nous accédons à ses membres avec l'opérateur de flèche `->` pour assigner des valeurs aux variables `nombre` et `suivant`. N'oubliez pas de vérifier si l'allocation de mémoire a réussi en vérifiant si le pointeur renvoyé par `malloc` est `NULL`. Enfin, nous libérons la mémoire allouée avec `free` pour éviter les fuites de mémoire.
+
+N'hésitez pas à adapter cet exemple à vos besoins et à explorer davantage la manipulation de structures et l'allocation dynamique de mémoire en langage C.
+
+---
