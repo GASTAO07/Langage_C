@@ -1,5 +1,5 @@
 
-**1**
+**Inverser deux variables en utilisant des pointers**
 
 Inverse les valeurs des variables `A` et `B` en utilisant des pointeurs :
 
