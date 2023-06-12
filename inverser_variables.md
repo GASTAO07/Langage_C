@@ -1,26 +1,7 @@
 
 **1**
 
-```md
-## Inverser deux variables
-
-```c
-#include <stdio.h>
-
-int main(void) {
-    int A = 2, B = 5, C = 0, *p1 = &A, *p2 = &B;
-
-    // Inverser A et B
-
-    A = *p2; 
-    B = *p1;
-
-    printf("%d\n", A);
-    printf("%d\n", B);
-}
-```
-
-Le code que vous avez fourni inverse les valeurs des variables `A` et `B` en utilisant des pointeurs. Voici le code corrigé avec les commentaires expliquant chaque étape :
+Inverse les valeurs des variables `A` et `B` en utilisant des pointeurs :
 
 ```c
 #include <stdio.h>
